@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <div class="table-container">
+            <h1 class="heading">Liste des mission</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Chauffeur</th>
+                        <th>Camion</th>
+                        <th>Date debut</th>
+                        <th>Date fin</th>
+                        <th>Tonnage</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let miss of missions">
+                        <td data-label="matricule">{{miss.chauffeur.substring(0,miss.chauffeur.length-1)}}</td>
+                        <td data-label="type">{{miss.camion.substring(0,miss.camion.length-1)}}</td>
+                        <td data-label="marque">{{miss.datdebut}}</td>
+                        <td data-label="matricule">{{miss.datdefin}}</td>
+                        <td data-label="matricule">{{miss.tonnage}}</td>
+                        <td><button class="btn btn-outline-danger " (click)="supprimermiss(miss.id)">Supprimer</button></td>
+                        <td><button class="btn btn-outline-info" [routerLink]="['/modifiermis',miss.id]">Modifier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

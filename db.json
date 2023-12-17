@@ -1,0 +1,56 @@
+{
+  "camions": [
+    {
+      "matricule": "147 TN 45",
+      "type": "semii",
+      "marque": "VOLVO",
+      "dispo": "oui",
+      "id": 1
+    },
+    {
+      "matricule": "789 TN 56",
+      "type": "semi",
+      "marque": "scania",
+      "dispo": "oui",
+      "id": 2
+    }
+  ],
+  "Chauffeurs": [
+    {
+      "nom": "iyed",
+      "prenom": "bencheikh",
+      "numTel": "53050771",
+      "cin": "12345678",
+      "dispo": "oui",
+      "id": 1
+    },
+    {
+      "nom": "hssan",
+      "prenom": "aidi",
+      "numTel": "45693218",
+      "cin": "45936218",
+      "dispo": "oui",
+      "id": 2
+    }
+  ],
+  "mession": [
+    {
+      "chauffeur": "iyed bencheikh 1",
+      "camion": "147 TN 45 : VOLVO 1",
+      "datdebut": "2023-12-08",
+      "datdefin": "2023-12-13",
+      "tonnage": 8,
+      "dispo": "oui",
+      "id": 1
+    },
+    {
+      "chauffeur": "iyed bencheikh 1",
+      "camion": "789 TN 56 : scania 2",
+      "datdebut": "2023-12-13",
+      "datdefin": "2023-12-13",
+      "tonnage": 47,
+      "dispo": "oui",
+      "id": 2
+    }
+  ]
+}

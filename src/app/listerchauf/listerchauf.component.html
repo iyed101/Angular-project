@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <div class="table-container">
+            <h1 class="heading">Liste des chauffeurs</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>NumTel</th>
+                        <th>Cin</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let chauf of chauffeurs">
+                        <td data-label="nom">{{chauf.nom}}</td>
+                        <td data-label="prenom">{{chauf.prenom}}</td>
+                        <td data-label="numTel">{{chauf.numTel}}</td>
+                        <td data-label="cin">{{chauf.cin}}</td>
+                        <td><button class="btn btn-outline-danger " (click)="supprimerChauf(chauf.id)">Supprimer</button></td>
+                        <td><button class="btn btn-outline-info" [routerLink]="['/modifierchauf',chauf.id]">Modifier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

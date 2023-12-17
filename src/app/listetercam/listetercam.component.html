@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <div class="table-container">
+            <h1 class="heading">Liste des camions</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Matricule</th>
+                        <th>Type</th>
+                        <th>Marque</th>
+                        <th>Supprimer</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cam of camions">
+                        <td data-label="matricule">{{cam.matricule}}</td>
+                        <td data-label="type">{{cam.type}}</td>
+                        <td data-label="marque">{{cam.marque}}</td>
+                        <td><button class="btn btn-outline-danger " (click)="supprimerCamion(cam.id)">Supprimer</button></td>
+                        <td><button class="btn btn-outline-info" [routerLink]="['/modifier',cam.id]">Modifier</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <body>
+        <div class="container ">
+            <h1 class="text-center mt-5 color ">Modifier Mission</h1>
+            <div class="row m-5 color">
+                <div class="col-3">
+                    <p>chauffeur</p>
+                    <div class="col-3">
+                        <select id="options" [(ngModel)]="miss.chauffeur">
+                            <option *ngFor="let ch of chauffeurs" [value]="ch.nom+' '+ch.prenom">{{ ch.nom+' '+ch.prenom }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <p>camion</p>
+                    <div class="col-3">
+                        <select id="options" [(ngModel)]="miss.camion">
+                            <option *ngFor="let cam of camions" [value]="cam.matricule+' : '+cam.marque">{{cam.matricule+' : '+cam.marque}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <p>datdebut</p>
+                    <input type="date" [(ngModel)]="miss.datdebut">
+                </div>
+                <div class="col-3">
+                    <p>datdefin</p>
+                    <input type="date" [(ngModel)]="miss.datdefin">
+                </div>
+                <div class="col-3">
+                    <p>datdefin</p>
+                    <input type="number" [(ngModel)]="miss.tonnage">
+                </div>
+                <div class="col-2 ">
+                    <button class="btn form-control  white" (click)="modifierchauf()">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

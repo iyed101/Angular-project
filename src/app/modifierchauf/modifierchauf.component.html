@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <div class="container ">
+            <h1 class="text-center mt-5 color ">Modifier chauffeur</h1>
+            <div class="row m-5 color">
+                <div class="col-3">
+                    <p>nom</p>
+                    <input type="text" [(ngModel)]="chauf.nom">
+                </div>
+                <div class="col-3">
+                    <p>prenom</p>
+                    <input type="text" [(ngModel)]="chauf.prenom">
+                </div>
+                <div class="col-3">
+                    <p>numTel</p>
+                    <input type="text" [(ngModel)]="chauf.numTel">
+                </div>
+                <div class="col-3">
+                    <p>cin</p>
+                    <input type="text" [(ngModel)]="chauf.cin">
+                </div>
+                <div class="col-2 ">
+                    <button class="btn form-control  white" (click)="modifierchauf()">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
